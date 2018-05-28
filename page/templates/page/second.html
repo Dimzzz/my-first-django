@@ -1,0 +1,19 @@
+﻿{% load static %} 
+<html>
+<title>Second page</title>
+    <head>
+       <meta charset="utf-8">
+       <title></title>
+       <link rel="stylesheet" href="{% static 'style.css' %}" type="text/css">
+	</head>
+    <body>
+    	{% block content %}
+	    <h1>Это вторая страница</h1>
+	    <p>созданная нами на Django</p>
+	    <a href='../'> Home </a> 
+	    <a href='../third'>Третья страница </a> <br><br>
+	    <center><img src="{% static 'img/img.jpg' %}" title="Picture"></center>
+	    {% endblock %}
+	    {% include 'page/includes/incl.html' %}
+	</body>
+</html>
